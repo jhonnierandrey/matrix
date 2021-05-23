@@ -50,6 +50,7 @@ class App extends Component {
     this.setState({
       codeMatrix : newText
     })
+    
     this.startMatrix();
 
     // update terminal
