@@ -1,0 +1,91 @@
+// Importing FontAwesome for Icons & G fonts.
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;600;700&display=swap');
+
+// Palette
+
+$white : #FFFFFF;
+$red : #FF0000;
+$yellow : #FFFF00;
+$black : #000000;
+$green : #00FF00;
+
+$window-color: #585858;
+$effect-color: #330d69;
+$font-family: 'IBM Plex Mono', monospace;
+
+$transparent-black : rgba(0, 0, 0, 0.8);
+
+// Theme Variables
+
+* { box-sizing: border-box;}
+
+.App {
+  text-align: center;
+  font-family: $font-family;
+}
+
+.App-header {
+  background-color: $black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+// elements 
+
+canvas {
+  display: block;
+}
+
+#terminalWindow {
+  position: absolute;
+  z-index: 9;
+  text-align: left;
+  border: 1px solid $window-color;
+  
+  textarea {
+    width: 500px;
+    font-weight: 600;
+    background-color: $transparent-black;
+    color: $green;
+    caret-color: $green;
+  }
+
+  textarea:focus-visible {
+    outline: none;
+  }
+}
+
+#terminalWindowHeader {
+  // padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: $window-color;
+  color: $black;
+
+  .fa-times-circle:hover {
+    cursor: pointer;
+    color: $red;
+  }
+
+  .fa-minus-circle:hover {
+    cursor: pointer;
+    color: $yellow;
+  }
+
+  .fa-plus-circle:hover {
+    cursor: pointer;
+    color: $green;
+  }
+}
