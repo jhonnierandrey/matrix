@@ -89,3 +89,14 @@ canvas {
     color: $green;
   }
 }
+
+@media(max-width: 768px){
+  #terminalWindow {
+    height: 100vh;
+    width: 100%;
+
+    textarea { 
+      width: 100%;
+    }
+  }
+}
