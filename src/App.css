@@ -64,6 +64,23 @@ canvas {
   color: #00FF00;
 }
 
+footer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  font-size: small;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00FF00;
+}
+footer a {
+  color: #FFFF00;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #FF0000;
+}
+
 @media (max-width: 768px) {
   #terminalWindow {
     height: 100vh;

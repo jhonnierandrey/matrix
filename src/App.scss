@@ -90,6 +90,29 @@ canvas {
   }
 }
 
+footer {
+  position : absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  font-size: small;
+
+  // padding-left: 1rem;
+  // display: flex;
+  // justify-content: left;
+  background-color: $transparent-black;
+  color: $green;
+
+  a {
+    color : $yellow;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $red;
+  }
+}
+
 @media(max-width: 768px){
   #terminalWindow {
     height: 100vh;
