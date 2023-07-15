@@ -1,34 +1,28 @@
-// Importing FontAwesome for Icons & G fonts.
+@import 'variables';
 
+// Importing FontAwesome for Icons & G fonts.
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;600;700&display=swap');
 
-// Palette
-
-$white : #FFFFFF;
-$red : #FF0000;
-$yellow : #FFFF00;
-$black : #000000;
-$green : #00FF00;
-
-$window-color: #585858;
-$effect-color: #330d69;
+// Theme Variables
 $font-family: 'IBM Plex Mono', monospace;
 
-$transparent-black : rgba(0, 0, 0, 0.8);
+html {
+  background-color: $black;
+}
 
-// Theme Variables
-
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
   font-family: $font-family;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: $black;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +37,6 @@ $transparent-black : rgba(0, 0, 0, 0.8);
 
 
 // elements 
-
 canvas {
   display: block;
 }
@@ -53,7 +46,7 @@ canvas {
   z-index: 9;
   text-align: left;
   border: 1px solid $window-color;
-  
+
   textarea {
     width: 500px;
     font-weight: 600;
@@ -68,7 +61,6 @@ canvas {
 }
 
 #terminalWindowHeader {
-  // padding: 10px;
   cursor: move;
   z-index: 10;
   background-color: $window-color;
@@ -91,20 +83,16 @@ canvas {
 }
 
 footer {
-  position : absolute;
+  position: absolute;
   left: 0px;
   bottom: 0px;
   right: 0px;
   font-size: small;
-
-  // padding-left: 1rem;
-  // display: flex;
-  // justify-content: left;
   background-color: $transparent-black;
   color: $green;
 
   a {
-    color : $yellow;
+    color: $yellow;
     text-decoration: none;
   }
 
@@ -113,12 +101,12 @@ footer {
   }
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   #terminalWindow {
     height: 100vh;
     width: 100%;
 
-    textarea { 
+    textarea {
       width: 100%;
     }
   }
